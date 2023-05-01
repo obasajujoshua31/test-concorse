@@ -9,7 +9,7 @@ image_resource:
 
 inputs:
   - name: add_number
-  - name: dependency-cache
+  # - name: dependency-cache
 
 run:
   path: run-test.sh
