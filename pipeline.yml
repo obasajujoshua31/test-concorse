@@ -29,9 +29,8 @@ jobs:
     plan:
       - get: add_number
         trigger: true
-        passed: [Install dependencies]
+        passed: [install dependencies]
       - get: dependency-cache
-        passed: [Install dependencies]
-      - task: run the test suite
+        passed: [install dependencies]
+      - task: "run the test suite"
         file: run_tests.yml
-
