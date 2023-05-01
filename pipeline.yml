@@ -33,4 +33,4 @@ jobs:
       - get: dependency_cache
         passed: [install_dependencies]
       - task: "run_the_test_suite"
-        file: run_tests.yml
+        file: run-test.yml
