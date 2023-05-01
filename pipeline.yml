@@ -20,7 +20,7 @@ resources:
         - package.json
 
 jobs:
-  - name: Install dependencies
+  - name: install dependencies
     plan:
       - get: add_number
         trigger: true
