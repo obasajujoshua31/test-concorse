@@ -20,17 +20,17 @@ resources:
         - package.json
 
 jobs:
-  - name: install dependencies
+  - name: install_dependencies
     plan:
       - get: add_number
         trigger: true
       - get: dependency-cache
-  - name: Run tests
+  - name: run_tests
     plan:
       - get: add_number
         trigger: true
-        passed: [install dependencies]
+        passed: [install_dependencies]
       - get: dependency-cache
-        passed: [install dependencies]
+        passed: [install_dependencies]
       - task: "run the test suite"
         file: run_tests.yml
