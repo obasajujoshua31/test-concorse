@@ -6,12 +6,11 @@ resource_types:
       repository: ymedlop/npm-cache-resource
       tag: latest
 
----
 resources:
   - name: add-number
     type: git
     source: &repo-source
-      uri: git@github.com:obasajujoshua31/test-concorse.git
+      uri: https://github.com/obasajujoshua31/test-concorse.git
       branch: main
   - name: dependency-cache
     type: npm-cache
