@@ -12,7 +12,7 @@ resources:
     source: &repo-source
       uri: https://github.com/obasajujoshua31/test-concorse.git
       branch: main
-  - name: dependency-cache
+  - name: dependency_cache
     type: npm-cache
     source:
       <<: *repo-source
@@ -24,7 +24,7 @@ jobs:
     plan:
       - get: add_number
         trigger: true
-      - get: dependency-cache
+      - get: dependency_cache
   - name: run_tests
     plan:
       - get: add_number
