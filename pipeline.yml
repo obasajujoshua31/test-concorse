@@ -12,25 +12,25 @@ resources:
     source: &repo-source
       uri: https://github.com/obasajujoshua31/test-concorse.git
       branch: main
-  # - name: dependency_cache
-  #   type: npm-cache
-  #   source:
-  #     <<: *repo-source
-  #     paths:
-  #       - package.json
+  - name: dependency_cache
+    type: npm-cache
+    source:
+      <<: *repo-source
+      paths:
+        - package.json
 
 jobs:
   - name: install_dependencies
     plan:
       - get: add_number
         trigger: true
-      # - get: dependency_cache
+      - get: dependency_cache
   - name: run_tests
     plan:
       - get: add_number
         trigger: true
         passed: [install_dependencies]
-      # - get: dependency_cache
-      #   passed: [install_dependencies]
+      - get: dependency_cache
+        passed: [install_dependencies]
       - task: "run_the_test_suite"
         file: run-test.yml
