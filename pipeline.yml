@@ -10,7 +10,7 @@ resources:
   - name: add_number
     type: git
     source: &repo-source
-      uri: git@github.com:obasajujoshua31/test-concorse.git
+      uri: https://github.com/obasajujoshua31/test-concorse.git
       branch: main
   - name: dependency_cache
     type: npm-cache
