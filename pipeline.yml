@@ -7,7 +7,7 @@ resource_types:
       tag: latest
 
 resources:
-  - name: add-number
+  - name: add_number
     type: git
     source: &repo-source
       uri: https://github.com/obasajujoshua31/test-concorse.git
@@ -22,12 +22,12 @@ resources:
 jobs:
   - name: Install dependencies
     plan:
-      - get: add-number
+      - get: add_number
         trigger: true
       - get: dependency-cache
   - name: Run tests
     plan:
-      - get: add-number
+      - get: add_number
         trigger: true
         passed: [Install dependencies]
       - get: dependency-cache

@@ -2,5 +2,5 @@
 
 set -e -u -x
 
-mv dependency-cache/node_modules test-example
-cd test-example && npm test
+mv dependency-cache/node_modules test_example
+cd test_example && npm test
